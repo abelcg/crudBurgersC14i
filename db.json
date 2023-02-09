@@ -62,6 +62,41 @@
       "urlImg": "https://images.pexels.com/photos/1633578/pexels-photo-1633578.jpeg",
       "category": "de-carne",
       "id": 9
+    },
+    {
+      "productName": "Burger",
+      "price": "1250",
+      "urlImg": "https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "category": "de-carne",
+      "id": 10
+    },
+    {
+      "productName": "Sanguche",
+      "price": "1250",
+      "urlImg": "https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "category": "de-carne",
+      "id": 11
+    },
+    {
+      "productName": "Burger mac",
+      "price": "1120",
+      "urlImg": "https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "category": "de-carne",
+      "id": 12
+    },
+    {
+      "productName": "Burger",
+      "price": "1128",
+      "urlImg": "https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "category": "de-carne",
+      "id": 13
+    },
+    {
+      "productName": "Burger",
+      "price": "333",
+      "urlImg": "https://images.pexels.com/photos/1633578/pexels-photo-1633578.jpeg",
+      "category": "de-carne",
+      "id": 14
     }
   ]
 }
