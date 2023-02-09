@@ -53,7 +53,7 @@ function App() {
             <Route
               exact
               path="/product/create"
-              element={<ProductCreate  />}
+              element={<ProductCreate URL={URL} getApi={getApi}/>}
             />
             <Route
               exact
