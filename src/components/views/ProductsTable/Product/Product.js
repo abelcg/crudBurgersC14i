@@ -21,13 +21,13 @@ const Product = ({ product, URL, getApi }) => {
       if (result.isConfirmed) {
         try {
           //consulta delete con fetch
-         /*  const res = await fetch(`${URL}/${id}`,{
+          /* const res = await fetch(`${URL}/${id}`,{
             method: 'DELETE',
             headers: {
               'Content-Type': 'application/json',
             }
-          }); */
-          
+          });
+           */
           //consulta delete con axios
 
           const res = await axios.delete(`${URL}/${id}`);
