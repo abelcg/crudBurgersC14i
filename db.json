@@ -51,16 +51,16 @@
     },
     {
       "productName": "Vanilla Ice cream",
-      "price": "753",
+      "price": "856",
       "urlImg": "https://images.pexels.com/photos/14525431/pexels-photo-14525431.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "category": "postre",
       "id": 8
     },
     {
-      "productName": "Meat Burger",
-      "price": "1250",
+      "productName": "vegan burger",
+      "price": "1150",
       "urlImg": "https://images.pexels.com/photos/1633578/pexels-photo-1633578.jpeg",
-      "category": "de-carne",
+      "category": "veganas",
       "id": 9
     },
     {
@@ -83,20 +83,6 @@
       "urlImg": "https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "category": "de-carne",
       "id": 12
-    },
-    {
-      "productName": "Burger",
-      "price": "1128",
-      "urlImg": "https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "category": "de-carne",
-      "id": 13
-    },
-    {
-      "productName": "Burger",
-      "price": "333",
-      "urlImg": "https://images.pexels.com/photos/1633578/pexels-photo-1633578.jpeg",
-      "category": "de-carne",
-      "id": 14
     }
   ]
 }
