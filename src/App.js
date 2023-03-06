@@ -8,6 +8,8 @@ import ProductsTable from "./components/views/ProductsTable/ProductsTable";
 import ProductCreate from "./components/views/productCreate/ProductCreate";
 import ProductEdit from "./components/views/productEdit/ProductEdit";
 import Error404 from "./components/views/error404/Error404";
+import Login from "./components/views/login/Login";
+import Register from "./components/views/register/Register";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import axios from "./config/axiosInit"
 
@@ -59,6 +61,16 @@ function App() {
               exact
               path="/product/edit/:id"
               element={<ProductEdit URL={URL} getApi={getApi}/>}
+            />
+             <Route
+              exact
+              path="/auth/login/"
+              element={<Login />}
+            />
+            <Route
+              exact
+              path="/auth/register/"
+              element={<Register/>}
             />
             <Route exact path="*" element={<Error404 />} />
           </Routes>

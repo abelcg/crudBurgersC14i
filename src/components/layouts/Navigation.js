@@ -13,8 +13,15 @@ const Navigation = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto color-nav">
-              <Link className="nav-link" to="/">Home</Link>
-              <Link className="nav-link" to="/product/table">Products</Link>
+              <Link className="nav-link" to="/">
+                Home
+              </Link>
+              <Link className="nav-link" to="/auth/login">
+                Login
+              </Link>
+              <Link className="nav-link" to="/product/table">
+                Products
+              </Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
