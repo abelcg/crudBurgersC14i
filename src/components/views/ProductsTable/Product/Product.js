@@ -51,7 +51,7 @@ const Product = ({ product, URL, getApi }) => {
 
   return (
     <tr>
-      <td>{product.id}</td>
+      <td>{product._id}</td>
       <td>{product.productName}</td>
       <td>${product.price}</td>
       <td>
@@ -61,14 +61,14 @@ const Product = ({ product, URL, getApi }) => {
       <td className="w-25">
         <div className="d-flex justify-content-center">
           <Link
-            to={`/product/edit/${product.id}`}
+            to={`/product/edit/${product._id}`}
             className="btn-orange mx-1 text-decoration-none text-center"
           >
             Update
           </Link>
           <button
             className="btn-red mx-1"
-            onClick={() => handleDelete(product.id)}
+            onClick={() => handleDelete(product._id)}
           >
             Delete
           </button>

@@ -8,7 +8,7 @@ import {
   validateCategory,
 } from "../../helpers/validateFields";
 import { useNavigate } from "react-router-dom";
-import axios from  "../../../config/axiosInit"
+import axios from "../../../config/axiosInit";
 
 const ProductCreate = ({ URL, getApi }) => {
   //States
@@ -24,9 +24,9 @@ const ProductCreate = ({ URL, getApi }) => {
   const navigate = useNavigate();
 
   const handleChange = (event) => {
-   const name = event.target.name;
-   const value = event.target.value;
-   setInputs((values) => ( {...values, [name]: value } ))
+    const name = event.target.name;
+    const value = event.target.value;
+    setInputs((values) => ({ ...values, [name]: value }));
   };
 
   //función para crear
@@ -45,7 +45,6 @@ const ProductCreate = ({ URL, getApi }) => {
       !validatePrice(inputs.price) ||
       !validateUrl(inputs.urlImg) ||
       !validateCategory(inputs.category)
-    
     ) {
       Swal.fire("Oops!", "Some data is invalid", "Error");
       return;
@@ -53,7 +52,7 @@ const ProductCreate = ({ URL, getApi }) => {
 
     //Enviar los datos
     const newProduct = {
-    /*productName,
+      /*productName,
       price,
       urlImg,
       category, */
@@ -79,13 +78,20 @@ const ProductCreate = ({ URL, getApi }) => {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
+              "x-access-token": JSON.parse(localStorage.getItem(("user-token"))).token
             },
             body: JSON.stringify(newProduct),
-          }); */
-
+          });
+ */
           //la petición con Axios
-           
-          const res = await axios.post(URL, newProduct);
+
+          const res = await axios.post(URL, newProduct, {
+            headers: {
+              "Content-Type": "application/json",
+              "x-access-token": JSON.parse(localStorage.getItem("user-token"))
+                .token,
+            },
+          });
           console.log(res);
 
           if (res.status === 201) {
@@ -122,7 +128,7 @@ const ProductCreate = ({ URL, getApi }) => {
               placeholder="Ej: Café"
               name="productName"
               value={inputs.productName || ""}
-              onChange={(e)=> handleChange(e)}
+              onChange={(e) => handleChange(e)}
               // onChange={({ target }) => setProductName(target.value)}
             />
           </Form.Group>
@@ -133,7 +139,7 @@ const ProductCreate = ({ URL, getApi }) => {
               placeholder="Ej: 50"
               name="price"
               value={inputs.price || ""}
-              onChange={(e)=> handleChange(e)}
+              onChange={(e) => handleChange(e)}
               // onChange={({ target }) => setPrice(target.value)}
             />
           </Form.Group>
@@ -144,7 +150,7 @@ const ProductCreate = ({ URL, getApi }) => {
               name="urlImg"
               value={inputs.urlImg || ""}
               placeholder="Ej: https://media.istockphoto.com/photos/two-freshly-baked-french-id1277579771?k=20"
-              onChange={(e)=> handleChange(e)}
+              onChange={(e) => handleChange(e)}
               //  onChange={({ target }) => setUrlImg(target.value)}
             />
           </Form.Group>
@@ -153,7 +159,7 @@ const ProductCreate = ({ URL, getApi }) => {
             <Form.Select
               name="category"
               value={inputs.category || ""}
-              onChange={(e)=> handleChange(e)}
+              onChange={(e) => handleChange(e)}
               //  onChange={({ target }) => setCategory(target.value)}
             >
               <option value="">Select an option</option>
