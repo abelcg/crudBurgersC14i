@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import { Container, Form } from "react-bootstrap";
+import { Alert, Container, Form } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import axios from "../../../config/axiosInit";
 
 const Register = ({ setLoggedUser }) => {
   const [inputs, setInputs] = useState({});
+  const [error, setError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
   const URL = process.env.REACT_APP_API_HAMBURGUESERIA_USUARIO
 
   const handleChange = (event) => {
@@ -49,6 +51,8 @@ const Register = ({ setLoggedUser }) => {
       }
     } catch (error) {
       console.log(error);
+      setError(true);
+      error.response.data?.message && setErrorMessage(error.response.data?.message)
     }
   };
 
@@ -95,6 +99,11 @@ const Register = ({ setLoggedUser }) => {
             <button className="btn-yellow">Send</button>
           </div>
         </Form>
+        {error ? (
+        <Alert variant="danger" onClick={() => setError(false)} dismissible>
+          {errorMessage}
+        </Alert>
+      ) : null}
       </Container>
     </div>
   );
